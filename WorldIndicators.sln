@@ -3,8 +3,62 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{F469D9DA-F672-42FA-A068-0EA3EB295B0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{CED7607D-49F1-4562-9DCA-4225BF94182C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldIndicators.Presentation.WebClient", "WorldIndicators.Presentation.WebClient\WorldIndicators.Presentation.WebClient.csproj", "{7C8CFF12-9594-4086-B05D-7E999525F63D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldIndicators.Persistence.Ado", "WorldIndicators.Persistence.Ado\WorldIndicators.Persistence.Ado.csproj", "{AB71C810-0723-44EB-B4FC-9C94C75AA2BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldIndicators.Application.Services", "WorldIndicators.Application.Services\WorldIndicators.Application.Services.csproj", "{AC8B59B2-B537-413C-89C7-7A9206285AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldIndicators.Application.Dto", "WorldIndicators.Application.Dto\WorldIndicators.Application.Dto.csproj", "{E8F69858-CE5D-4B9A-A2F6-E4D1072EAB97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{77A4BA7C-8895-47E9-9D9E-DE9279F35E9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Utils", "Infrastructure.Utils\Infrastructure.Utils.csproj", "{F3250F74-0F02-477E-B7D6-EF5DCB26D02B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbQueries", "DbQueries", "{151B103E-0287-48F3-968D-B93B0135DF91}"
+	ProjectSection(SolutionItems) = preProject
+		sp_c_countries_drop_down.sql = sp_c_countries_drop_down.sql
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C8CFF12-9594-4086-B05D-7E999525F63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8CFF12-9594-4086-B05D-7E999525F63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8CFF12-9594-4086-B05D-7E999525F63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8CFF12-9594-4086-B05D-7E999525F63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB71C810-0723-44EB-B4FC-9C94C75AA2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB71C810-0723-44EB-B4FC-9C94C75AA2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB71C810-0723-44EB-B4FC-9C94C75AA2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB71C810-0723-44EB-B4FC-9C94C75AA2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8B59B2-B537-413C-89C7-7A9206285AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8B59B2-B537-413C-89C7-7A9206285AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8B59B2-B537-413C-89C7-7A9206285AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8B59B2-B537-413C-89C7-7A9206285AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F69858-CE5D-4B9A-A2F6-E4D1072EAB97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F69858-CE5D-4B9A-A2F6-E4D1072EAB97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F69858-CE5D-4B9A-A2F6-E4D1072EAB97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F69858-CE5D-4B9A-A2F6-E4D1072EAB97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3250F74-0F02-477E-B7D6-EF5DCB26D02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3250F74-0F02-477E-B7D6-EF5DCB26D02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3250F74-0F02-477E-B7D6-EF5DCB26D02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3250F74-0F02-477E-B7D6-EF5DCB26D02B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C8CFF12-9594-4086-B05D-7E999525F63D} = {CED7607D-49F1-4562-9DCA-4225BF94182C}
+		{AB71C810-0723-44EB-B4FC-9C94C75AA2BF} = {F469D9DA-F672-42FA-A068-0EA3EB295B0E}
+		{AC8B59B2-B537-413C-89C7-7A9206285AAE} = {F469D9DA-F672-42FA-A068-0EA3EB295B0E}
+		{E8F69858-CE5D-4B9A-A2F6-E4D1072EAB97} = {F469D9DA-F672-42FA-A068-0EA3EB295B0E}
+		{F3250F74-0F02-477E-B7D6-EF5DCB26D02B} = {77A4BA7C-8895-47E9-9D9E-DE9279F35E9B}
 	EndGlobalSection
 EndGlobal
