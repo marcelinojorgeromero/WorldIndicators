@@ -22,6 +22,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbQueries", "DbQueries", "{151B103E-0287-48F3-968D-B93B0135DF91}"
 	ProjectSection(SolutionItems) = preProject
 		sp_c_countries_drop_down.sql = sp_c_countries_drop_down.sql
+		sp_c_datatable_indicators_natalidad_mortalidad.sql = sp_c_datatable_indicators_natalidad_mortalidad.sql
 	EndProjectSection
 EndProject
 Global

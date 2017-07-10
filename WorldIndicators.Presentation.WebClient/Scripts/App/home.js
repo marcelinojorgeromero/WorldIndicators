@@ -30,7 +30,8 @@
             format: "dd-mm-yyyy",
             clearBtn: true,
             language: "es",
-            startView: "years",
+            //startView: "years",
+            defaultViewDatev: "year",
             title: "Fecha Inicio",
             todayBtn: true,
             todayHighlight: true
@@ -89,36 +90,6 @@
                 });
             }
         });
-        //pgElements.tbMainDataTable.DataTable({
-        //    "bFilter": false,
-        //    "bLengthChange": false,
-        //    "bSort": false,
-        //    "bProcessing": true,
-        //    "bSearchable": true,
-        //    "bServerSide": true,
-        //    "sPaginationType": "bs_full",
-        //    "sAjaxSource": routes["dataTableMain"],
-        //    "aoColumnDefs": [
-        //        { "sClass": "left", "sWidth": "30%", "bSortable": false, "aTargets": [0], "mData": "CountryName" },
-        //        { "sClass": "left", "sWidth": "10%", "bSortable": false, "aTargets": [1], "mData": "Year" },
-        //        { "sClass": "left", "sWidth": "10%", "bSortable": false, "aTargets": [2], "mData": "BirthRateCrude" },
-        //        { "sClass": "left", "sWidth": "10%", "bSortable": false, "aTargets": [3], "mData": "MortalityRateAdultMale" },
-        //        { "sClass": "left", "sWidth": "10%", "bSortable": false, "aTargets": [4], "mData": "MortalityRateAdultFemale" },
-        //        { "sClass": "left", "sWidth": "10%", "bSortable": false, "aTargets": [5], "mData": "MortalityRateInfant" },
-        //        { "sClass": "left", "sWidth": "10%", "bSortable": false, "aTargets": [6], "mData": "MortalityRateUnder5" },
-        //        { "sClass": "left", "sWidth": "10%", "bSortable": false, "aTargets": [7], "mData": "MortalityRate" }
-        //    ],
-        //    "fnServerData": function (sSource, aoData, fnCallback) {
-        //        aoData.push(
-        //            { "name": "sSearch_a", "value": pgElements.drpdnCountry.val() },
-        //            { "name": "sSearch_b", "value": pgElements.txtFechaInicio.val() },
-        //            { "name": "sSearch_c", "value": pgElements.txtFechaFinal.val() }
-        //        );
-        //        $.getJSON(sSource, aoData, function (json) {
-        //            fnCallback(json);
-        //        });
-        //    }
-        //});
     }
 
     function initEventHandlers() {
