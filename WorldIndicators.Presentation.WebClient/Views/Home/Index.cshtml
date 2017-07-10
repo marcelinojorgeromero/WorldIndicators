@@ -11,7 +11,7 @@
         <div class="form-inline">
             <div class="form-group">
                 @Html.LabelFor(m => m.CountryCode, "Países")
-                @Html.DropDownListFor(m => m.CountryCode, Model.Countries.Select(country => new SelectListItem{Value = country.Code,Text = country.ShortName}), "Select one", new { @class = "form-control" })
+                @Html.DropDownListFor(m => m.CountryCode, Model.Countries.Select(country => new SelectListItem{Value = country.Code,Text = country.ShortName}), "Seleccionar...", new { @class = "form-control" })
             </div>
             <div class="form-group">
                 <label for="txt-fecha-inicio">Fecha Inicio</label>
@@ -22,7 +22,7 @@
                 <input type="text" class="form-control" id="txt-fecha-final" />
             </div>
 
-            <button id="btnBuscar" type="button" class="btn btn-md btn-labeled btn-primary" style="margin-top:0px;"><span class="btn-label icon fa fa-search"></span>Buscar</button>
+            <button id="btn-buscar" type="button" class="btn btn-md btn-labeled btn-primary"><span class="btn-label icon fa fa-search"></span> Buscar</button>
         </div>
     </form>
 </div>
@@ -52,7 +52,7 @@
     @Scripts.Render("~/bundles/home")
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
-            var app = window.$app.home;
+            var app = window.app.home;
             app.AddRoute("dataTableMain", "@Url.Action("DataTableMain", "Home")");
             app.Init();
         });

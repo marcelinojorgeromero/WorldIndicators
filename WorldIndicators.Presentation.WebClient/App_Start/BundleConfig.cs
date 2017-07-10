@@ -8,6 +8,8 @@ namespace WorldIndicators.Presentation.WebClient
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            BundleTable.EnableOptimizations = false;
+            
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -42,6 +44,7 @@ namespace WorldIndicators.Presentation.WebClient
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap-theme.css",
                       "~/Content/bootstrap-datepicker.css",
+                      "~/Content/font-awesome.css",
                       "~/Content/DataTables/css/dataTables.bootstrap.css",
                       "~/Content/DataTables/css/responsive.bootstrap.css",
                       "~/Content/site.css"

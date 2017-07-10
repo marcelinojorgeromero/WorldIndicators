@@ -1,7 +1,9 @@
 ﻿
 (function ($) {
     "use strict";
-    var Ajax = (function () {
+
+    window["app"] = {};
+    window.app["ajax"] = (function () {
 
         function get(sUrl, oParams) {
             var jqXhr = $.ajax({
@@ -128,7 +130,6 @@
     /// Set globals
     ///</summary>
     window.logger = new Log(true);
-    window.app["ajax"] = Ajax;
 
     function initAjax() {
         var token = $("input[name=\"__RequestVerificationToken\"]").val();
@@ -173,6 +174,33 @@
             });
         });
     };
+
+    /* Set the defaults for DataTables initialisation */
+    $.extend(true, $.fn.DataTable.defaults, {
+        "sDom": "<'row'<'col-sm-12'<'pull-right'f><'pull-left'l>r<'clearfix'>>>t<'row'<'col-sm-12'<'pull-left'i><'pull-right'p><'clearfix'>>>",
+        "oLanguage": {
+            "sLengthMenu": 'Mostrar <select>' +
+                                    '<option value="10">10</option>' +
+                                    '<option value="15">15</option>' +
+                                    '<option value="20">20</option>' +
+                                    '</select> Registros',
+            "sZeroRecords": "No se encontraron registros",
+            "sInfo": "Registros del _START_ al _END_ de un total de _TOTAL_",
+            "sInfoPostFix": "",
+            "sEmptyTable": "No hay registros para mostrar",
+            "sInfoFiltered": "(Filtrado a partir de un total de _MAX_ registros)",
+            "oPaginate": {
+                "sFirst": '<button type="button" class="btn btn-default btn-xs"><strong><|</strong></button> ',
+                "sLast": ' <button type="button" class="btn btn-default btn-xs"><strong>|></strong></button> ',
+                "sNext": ' <button type="button" class="btn btn-default btn-xs"><strong>></strong></button> ',
+                "sPrevious": ' <button type="button" class="btn btn-default btn-xs"><strong><</strong></button> '
+            },
+            "sSearch": "",
+            "sProcessing": "Procesando..",
+            "sLoadingRecords": "Cargando...",
+            "sInfoEmpty": "Mostrando de 0 a 0 de un total de 0 registros"
+        }
+    });
 })(jQuery);
 
 

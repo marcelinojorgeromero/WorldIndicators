@@ -35,11 +35,5 @@ namespace WorldIndicators.Presentation.WebClient.Controllers
             var dataTableResult = _indicadoresService.Value.GetDataTableMain(parameters, out totalRow, out totalFilter);
             return DataTable<List<Dto.HomeMainDataTable>>.SerializeToJson(parameters.sEcho, totalRow, totalFilter, dataTableResult);
         }
-
-        // TODO: VALIDAR EL FORMULARIO CON DECORADORES
-        [HttpPost]
-        public void Filter()
-        {
-        }
     }
 }
