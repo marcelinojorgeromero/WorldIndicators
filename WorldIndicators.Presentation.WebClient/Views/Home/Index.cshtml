@@ -11,7 +11,7 @@
         <div class="form-inline">
             <div class="form-group">
                 @Html.LabelFor(m => m.CountryCode, "Países")
-                @Html.DropDownListFor(m => m.CountryCode, Model.Countries.Select(country => new SelectListItem{Value = country.Code,Text = country.ShortName}), "Seleccionar...", new { @class = "form-control" })
+                @Html.DropDownListFor(m => m.CountryCode, Model.Countries.Select(country => new SelectListItem{Value = country.Code,Text = country.ShortName}), "Todos", new { @class = "form-control" })
             </div>
             <div class="form-group">
                 <label for="txt-fecha-inicio">Fecha Inicio</label>

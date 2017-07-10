@@ -24,13 +24,13 @@ namespace WorldIndicators.Application.Services
             Func<string, DateTime?> parseDate = datestr =>
             {
                 DateTime parsedDate;
-                return DateTime.TryParse(datestr, out parsedDate) ? parsedDate : (DateTime?) null;
+                return DateTime.TryParseExact(datestr, "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out parsedDate) ? parsedDate : (DateTime?) null;
             };
 
             var displayStart = parameter.iDisplayStart;
             var displayLength = parameter.iDisplayLength;
 
-            var countryCode = string.IsNullOrEmpty(parameter.sSearch_a) ? null : string.Empty;
+            var countryCode = string.IsNullOrEmpty(parameter.sSearch_a) ? null : parameter.sSearch_a;
             var startDate = parseDate(parameter.sSearch_b);
             var endDate = parseDate(parameter.sSearch_c);
             var total = new SqlParameter("@total", SqlDbType.Int) {Direction = ParameterDirection.Output};

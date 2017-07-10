@@ -129,7 +129,7 @@
     ///<summary>
     /// Set globals
     ///</summary>
-    window.logger = new Log(true);
+    window.logger = new Log(false);
 
     function initAjax() {
         var token = $("input[name=\"__RequestVerificationToken\"]").val();

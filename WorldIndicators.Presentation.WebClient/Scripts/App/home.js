@@ -26,12 +26,13 @@
     }
 
     function initInterface() {
+        //pgElements.btnBuscar.prop("disabled", true);
+
         pgElements.txtFechaInicio.datepicker({
             format: "dd-mm-yyyy",
             clearBtn: true,
             language: "es",
-            //startView: "years",
-            defaultViewDatev: "year",
+            startView: "years",
             title: "Fecha Inicio",
             todayBtn: true,
             todayHighlight: true
@@ -90,6 +91,11 @@
                 });
             }
         });
+
+        //pgElements.drpdnCountry.change(function () {
+        //    var $this = $(this);
+        //    pgElements.btnBuscar.prop("disabled", $this.val() === "");
+        //});
     }
 
     function initEventHandlers() {
