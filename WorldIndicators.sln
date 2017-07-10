@@ -25,6 +25,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbQueries", "DbQueries", "{
 		sp_c_datatable_indicators_natalidad_mortalidad.sql = sp_c_datatable_indicators_natalidad_mortalidad.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataMigrationScripts", "DataMigrationScripts", "{2909B47A-FFCA-4B34-BD9E-23676595012F}"
+	ProjectSection(SolutionItems) = preProject
+		ExecuteMultipleSqlFiles.linq = ExecuteMultipleSqlFiles.linq
+		SplitSqlFileForGeneratingDb.linq = SplitSqlFileForGeneratingDb.linq
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

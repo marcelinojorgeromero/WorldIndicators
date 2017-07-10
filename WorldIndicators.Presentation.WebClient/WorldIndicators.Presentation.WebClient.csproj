@@ -384,6 +384,8 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <None Include="Properties\PublishProfiles\WorldIndicatorsAcidLabs - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\WorldIndicatorsAcidLabs - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\WorldIndicatorsAcidLabs.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\App\home.js" />
