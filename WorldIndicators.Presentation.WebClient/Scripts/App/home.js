@@ -35,9 +35,7 @@
             startView: "years",
             clearBtn: true,
             language: "es",
-            title: "Fecha Inicio",
-            todayBtn: true,
-            todayHighlight: true
+            title: "Fecha Inicio"
         }).on("changeDate", function (ev) {
             var fechaFinal = pgElements.txtFechaFinal.datepicker("getDate");
             var fechaInicio = pgElements.txtFechaInicio.datepicker("getDate");
@@ -55,8 +53,6 @@
             clearBtn: true,
             language: "es",
             title: "Fecha Final",
-            todayBtn: true,
-            todayHighlight: true
         }).on("changeDate", function (ev) {
             var fechaFinal = pgElements.txtFechaFinal.datepicker("getDate");
             var fechaInicio = pgElements.txtFechaInicio.datepicker("getDate");
