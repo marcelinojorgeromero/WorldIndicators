@@ -240,3 +240,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/WorldIndicators.Presentation.WebClient/Properties/PublishProfiles/WorldIndicatorsAcidLabs - FTP.pubxml
+*.pubxml
+/WorldIndicators.Presentation.WebClient/Web.WorldIndicatorsAcidLabs - Web Deploy.config

@@ -48,9 +48,6 @@ namespace WorldIndicators.Application.Services
             var list = new List<Dto.HomeMainDataTable>();
             _dbContext.Query("sp_c_datatable_indicators_natalidad_mortalidad", spParameters, reader =>
             {
-                var mraf = reader["MortalityRateAdultFemale"].ToString();
-                var mrafD = decimal.Parse(mraf);
-
                 list.Add(new Dto.HomeMainDataTable
                 {
                     CountryName = reader["CountryName"].ToString(),

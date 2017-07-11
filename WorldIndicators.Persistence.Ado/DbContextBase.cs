@@ -30,7 +30,7 @@ namespace WorldIndicators.Persistence.Ado
         {
             SqlDataReader rdr = null;
             var connection = new SqlConnection(ConnectionString);
-
+            
             try
             {
                 connection.Open();
