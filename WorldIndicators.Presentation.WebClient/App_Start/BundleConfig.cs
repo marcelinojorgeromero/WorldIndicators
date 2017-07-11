@@ -50,6 +50,7 @@ namespace WorldIndicators.Presentation.WebClient
                       "~/Content/DataTables/css/jquery.dataTables.css",
                       "~/Content/DataTables/css/jquery.dataTables_themeroller.css",
                       "~/Content/DataTables/css/responsive.dataTables.css",
+                      "~/Content/spinner.css",
                       "~/Content/site.css"
             ));
         }

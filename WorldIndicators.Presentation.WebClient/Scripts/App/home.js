@@ -26,13 +26,15 @@
     }
 
     function initInterface() {
-        //pgElements.btnBuscar.prop("disabled", true);
+        pgElements.btnBuscar.prop("disabled", true);
 
         pgElements.txtFechaInicio.datepicker({
-            format: "dd-mm-yyyy",
+            format: " yyyy",
+            viewMode: "years", 
+            minViewMode: "years",
+            startView: "years",
             clearBtn: true,
             language: "es",
-            startView: "years",
             title: "Fecha Inicio",
             todayBtn: true,
             todayHighlight: true
@@ -46,10 +48,12 @@
             }
         }).data("datepicker");;
         pgElements.txtFechaFinal.datepicker({
-            format: "dd-mm-yyyy",
+            format: " yyyy",
+            viewMode: "years",
+            minViewMode: "years",
+            startView: "years",
             clearBtn: true,
             language: "es",
-            startView: "years",
             title: "Fecha Final",
             todayBtn: true,
             todayHighlight: true
@@ -70,6 +74,11 @@
             "bSearchable": false,
             "bServerSide": true,
             "sAjaxSource": routes["dataTableMain"],
+            "dom": "rtip", // the "r" is for the "processing" message
+            "language": {
+                "processing": '<span class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></span>'
+            },
+            "processing": true,
             "aoColumnDefs": [
                 { "sClass": "left", "sWidth": "15%", "bSortable": false, "aTargets": [0], "mData": "CountryName" },
                 { "sClass": "left", "sWidth": "5%", "bSortable": false, "aTargets": [1], "mData": "Year" },
@@ -101,6 +110,9 @@
     function initEventHandlers() {
         pgElements.btnBuscar.click(function () {
             pgElements.tbMainDataTable.dataTable().fnDraw(true);
+        });
+        pgElements.tbMainDataTable.on("processing.dt", function (e, settings, processing) {
+            pgElements.btnBuscar.prop("disabled", processing);
         });
     }
 
