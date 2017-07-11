@@ -198,7 +198,7 @@
             "sSearch": "",
             "sProcessing": "Procesando..",
             "sLoadingRecords": "Cargando...",
-            "sInfoEmpty": "Mostrando de 0 a 0 de un total de 0 registros"
+            "sInfoEmpty": ""
         }
     });
 })(jQuery);

@@ -45,8 +45,11 @@ namespace WorldIndicators.Presentation.WebClient
                       "~/Content/bootstrap-theme.css",
                       "~/Content/bootstrap-datepicker.css",
                       "~/Content/font-awesome.css",
-                      "~/Content/DataTables/css/dataTables.bootstrap.css",
-                      "~/Content/DataTables/css/responsive.bootstrap.css",
+                      // "~/Content/DataTables/css/dataTables.bootstrap.css",
+                      //"~/Content/DataTables/css/responsive.bootstrap.css",
+                      "~/Content/DataTables/css/jquery.dataTables.css",
+                      "~/Content/DataTables/css/jquery.dataTables_themeroller.css",
+                      "~/Content/DataTables/css/responsive.dataTables.css",
                       "~/Content/site.css"
             ));
         }
